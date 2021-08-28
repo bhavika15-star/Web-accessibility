@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css"/>
+    <title>Web-Site</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex navbar">
+            <a href="#" class="navbartext">Bhavika Chauhan</a>
+            <ul class="d-flex float-right p-2">
+                <a class="p-2 navbartext" href="/about">About me</a>
+                <a class="p-2 navbartext" href="/services">Services</a>
+                <a class="p-2 navbartext" href="/contacts">Contact</a>
+            </ul>
+        </header>
+    </div>
+    <br/><br/>
+    <main>
+        <div class="container">
+            <h1 class="heading" style="text-align: center;"><b>Learn about me</b></h1>
+            <br/><br/>
+            <h5 class="subtext" style="text-align: center;">This is a dummy paragraph about me.</h5>
+            <br/><br/>
+            <img src="Bhavika.jpeg" alt="This is an image of a girl name Bhavika Chauhan.Her hair is open and she is wearing a jakect.Also there is a specs on her head." style="height: 300px;">
+            <br/><br/><br/>
+            <h3 style="text-align: center;"><b>About My services</b></h3>
+            <br>
+            <ul>
+                <li class="borders" >
+                    <div>
+                    <button 
+                    aria-expanded="false"
+                    aria-controls="sect1"
+                    id="btn1"
+                     class="accordion">UI Design <span class="expander up"></span></button>
+                    <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </li>
+                <li>
+                    <button
+                    aria-expanded="false"
+                    aria-controls="sect1"
+                    id="btn1"
+                     class="accordion">UI Design <span class="expander up"></span></button>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </li>
+                <li>
+                    <button
+                    aria-expanded="false"
+                    aria-controls="sect1"
+                    id="btn1" 
+                     class="accordion">UI Design <span class="expander up" ></span></button>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <br/><br/>
+<h2 style="text-align: center;"><b>Contact Me</b></h2>
+<form action="/" class="form-inline w-75 m-auto">
+    <label for="fname">First Name:</label><br>
+    <input type="text" name="" class="form-control text-center" placeholder="Your Name" ><br>
+    <label for="lname">Last Name:</label><br>
+    <input type="text" name="" class="form-control text-center" placeholder="Last Name"><br><br>
+    <button class="btn btn-success">Submit</button>
+</form>
+<br>
+<br>
+<script>
+    var acc=document.getElementsByClassName("accordion");
+    var expanders=document.getElementsByClassName("expander");
+    var i;
+    for(i=0;i <acc.length;i++){
+        acc[i].addEventListener("click",function(){
+            var panel=this.nextElementSibling;
+            if(panel.style.display=="block"){
+                panel.style.display="none";
+                this.setAttribute('aria-expanded','false');
+
+                this.firstElementChild.classList.remove('up')
+                this.firstElementChild.classList.add('down')
+            } else{
+                panel.style.display="block";
+
+                this.setAttribute('aria-expanded','true');
+                this.firstElementChild.classList.remove('down'); 
+                this.firstElementChild.classList.add('up')
+            }
+        });
+    } 
+</script>
+</body>
+</html>

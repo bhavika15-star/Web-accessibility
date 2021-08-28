@@ -1,0 +1,40 @@
+.navbar{
+    text-decoration: none;
+}
+.navbartext{
+   text-decoration: none;
+   color: #785ac0;
+   font-weight: bolder;
+   font-size: 1.3rem;
+}
+.heading{
+    font-weight: 550;
+}
+.accordion{
+    background-color: #4200bc;
+    color: white;
+    width: 100%;
+    padding: 6px;
+    border: none;
+    margin: 6px;
+    text-align: left;
+    font-weight: bold;
+    padding-left: 15px;
+}
+.accordion:hover{
+    border: chocolate;
+    border-style: solid;
+    border-radius: 5px;
+}
+.up:after{
+    content: '\025B4';
+    float: right;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.down:after{
+    content: '\025BE';
+    float: right;
+    font-size: 24px;
+    margin-right: 10px;
+}
